@@ -1,0 +1,232 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import
+    'grid'
+;
+
+// base fonts
+* {
+  font-family: Roboto;
+  margin-top: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+ font-size: 18px;
+}
+
+// Base Colors
+$shade-10: #A86EDD !default;
+$shade-1: #d7dcdf !default;
+$shade-0: #fff !default;
+$teal: #1abc9c !default;
+
+// link button style
+a {
+  background-color: $teal;
+  color: $shade-0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: $teal;
+  color: $shade-0;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// header styles
+.menu {
+  padding: 16px;
+  background-color: $teal;
+  a {color: $shade-0;}
+  .page-link {
+    margin-right: 2em;
+  }
+}
+
+//about styles
+
+.aboutpage {
+  padding: 10px 32px;
+}
+
+.actions {
+  text-align: center;
+  #reset {
+    background-color: #aaa;
+  }
+}
+
+
+// slider styles are pre-compiled since autoprefixer not working w/ gh-pages
+.sliderpage {
+  padding: 10px 32px; }
+  .sliderpage h2 {
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center; }
+  .sliderpage img {
+    height: 30px;
+    width: auto; }
+  .sliderpage .emoji-left {
+    float: left;
+    display: inline; }
+  .sliderpage .emoji-right {
+    float: right;
+    display: inline;
+    text-align: right; }
+  .sliderpage *, .sliderpage *:before, .sliderpage *:after {
+    box-sizing: border-box; }
+  .sliderpage body {
+    font-family: Roboto; }
+  .sliderpage .range-slider {
+    margin: 0px 0 40px 0%; }
+  .sliderpage .range-slider {
+    width: 100%;
+    clear: both;
+    padding-top: 5px; }
+  .sliderpage .range-slider__range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0; }
+    .sliderpage .range-slider__range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+              appearance: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1abc9c;
+      cursor: pointer;
+      -webkit-transition: background .15s ease-in-out;
+      transition: background .15s ease-in-out; }
+      .sliderpage .range-slider__range::-webkit-slider-thumb:hover {
+        background: #A86EDD; }
+    .sliderpage .range-slider__range:active::-webkit-slider-thumb {
+      background: #A86EDD; }
+    .sliderpage .range-slider__range::-moz-range-thumb {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      background: #1abc9c;
+      cursor: pointer;
+      -webkit-transition: background .15s ease-in-out;
+      transition: background .15s ease-in-out; }
+      .sliderpage .range-slider__range::-moz-range-thumb:hover {
+        background: #A86EDD; }
+    .sliderpage .range-slider__range:active::-moz-range-thumb {
+      background: #A86EDD; }
+  .sliderpage .range-slider__value {
+    display: none;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #A86EDD;
+    padding: 5px 10px;
+    margin-left: 8px; }
+    .sliderpage .range-slider__value:after {
+      position: absolute;
+      top: 8px;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 7px solid #A86EDD;
+      border-bottom: 7px solid transparent;
+      content: ''; }
+  .sliderpage ::-moz-range-track {
+    background: #d7dcdf;
+    border: 0; }
+  .sliderpage input::-moz-focus-inner,
+  .sliderpage input::-moz-focus-outer {
+    border: 0; }
+  .sliderpage .button-right {
+    display: inline;
+    text-align: right; }
+
+// resources styles
+// .resourcespage {
+//   padding: 10px;
+//   .assets {
+//     padding: 0 10px;
+//     width: 75%;
+//     @media (max-width: 1024px) {
+//       width: 100%;
+//     }
+//     float: left;
+//     box-sizing: border-box;
+//       .asset {
+//         box-sizing: border-box;
+//         float: left;
+//         margin-right: 10px;
+//         width: 20%;
+//         @media (max-width: 1024px) {
+//           width: 40%;
+//         }
+//         height: 200px;
+//         border: 5px solid $shade-1;
+//         padding: 5px;
+//         margin-bottom: 10px;
+//         img {
+//             width: auto;
+//             height: 100px;
+//         }
+//       }
+//       div.selected {
+//           border: 5px solid $teal;
+//       }
+//       div:hover {
+//           cursor: pointer;
+//       }
+//
+//       #galleryHeader {
+//           display: none;
+//       }
+//       #reset {
+//         background-color: $teal;
+//         float: right;
+//       }
+//     }
+//   #form {
+//     padding: 10px;
+//     width: 25%;
+//     @media (max-width: 1024px) {
+//       width: 100%;
+//     }
+//     #comment {
+//       height: 100px;
+//       text-align: top;
+//     }
+//     text-align: center;
+//     box-sizing: border-box;
+//     float: left;
+//     background-color: #c1b1b1;
+//   }
+// }
